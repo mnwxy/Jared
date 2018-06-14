@@ -201,6 +201,9 @@ struct MessageRouting {
         if myLowercaseMessage.contains("/help") {
             sendDocumentation(myMessage, forRoom: forRoom)
         }
+        else if myLowerCaseMessage == "please"{
+            SendText("William is one step closer to finishing this damn bot.", toRoom: forRoom)
+        }
         else if myLowercaseMessage == "/reload" {
             reloadPlugins()
             SendText("Successfully reloaded plugins.", toRoom: forRoom)
